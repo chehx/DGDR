@@ -35,6 +35,18 @@ Besides, we provide open-source codes for pre-processing these datasets and seve
       - [Eyepacs](#eyepacs-1)
 - [Citation](#citation)
 
+## Current Results
+
+<p align="center">
+  <img src="./figures/results.png">
+  Comparison with state-of-the-art approaches under the DG test.
+</p>
+
+<p align="center">
+  <img src="./figures/esdg_results.png">
+  Comparison with state-of-the-art approaches under the ESDG test.
+</p>
+
 ## Get Access
 
 Eight fundus datasets are all open-source. You can find and download them on websites. The labels should follow the same standard. Due to the license issue, you can download the processed datasets we provided here[www.baidu.com], except FAGDR and MESSIDOR-2. The labels of these datasets are all in the range of 0 to 4. The meaning of each label is as follows:
