@@ -14,6 +14,7 @@ Besides, we provide open-source codes for pre-processing these datasets and seve
 
 - [Guideline for Building GDR-Bench Dataset](#guideline-for-building-gdr-bench-dataset)
   - [Table of Contents](#table-of-contents)
+  - [Current Results](#current-results)
   - [Get Access](#get-access)
       - [APTOS](#aptos)
       - [DeepDR](#deepdr)
