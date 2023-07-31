@@ -50,7 +50,7 @@ Besides, we provide open-source codes for pre-processing these datasets and seve
 
 ## Get Access
 
-Eight fundus datasets are all open-source. You can find and download them on websites. The labels should follow the same standard. Due to the license issue, you can download the processed datasets we provided here[www.baidu.com], except FAGDR and MESSIDOR-2. The labels of these datasets are all in the range of 0 to 4. The meaning of each label is as follows:
+Eight fundus datasets are all open-source. You can find and download them on websites. The labels should follow the same standard. Due to the license issue, you can download the processed datasets we provided here (GDRBench [images](https://hkustconnect-my.sharepoint.com/:u:/g/personal/hche_connect_ust_hk/EclfmDU0H1ZFnpRhaBhf2QYB16lpME4JVUwT1vKTBlskzQ?e=DUoxQR) and [masks](https://hkustconnect-my.sharepoint.com/:f:/g/personal/ychengbj_connect_ust_hk/EsRUyE6bkrlKhSZdND4OygABKV6mHZzjfMj-cJA1zUVXPg?e=VbtD6q)), except FAGDR and MESSIDOR-2. The labels of these datasets are all in the range of 0 to 4. The meaning of each label is as follows:
 
 ```
 0 = nodr
