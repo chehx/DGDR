@@ -225,7 +225,7 @@ The pre-processing codes is excerpted from [EYEQ](https://github.com/HzFu/EyeQ).
 
 
 
-After processing all the images, the whole dataset should be organized as follows. We provide a kind of dataset split [here](splits). **PLEASE NOTE** that you should rename all the dataset folders to uppercase if you want to use our splits.
+After processing all the images, the whole dataset should be organized as follows. We provide a kind of dataset split [here](splits). **PLEASE NOTE** that you should rename all the dataset folders to uppercase if you want to use our splits. **What's more**, you don't need to prepare masks for DDR and Eyepacs datasets.
 ```
 .
 ├── images
