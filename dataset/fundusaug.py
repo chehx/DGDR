@@ -1,5 +1,6 @@
 '''
 This code includes all FundusAug modules.
+This code is partially borrowed from https://github.com/HzFu/EyeQ_Enhancement
 '''
 import math
 import numpy as np
@@ -12,105 +13,12 @@ from joblib import Parallel, delayed'''
 
 types=['brightness','contrast','saturation','hue','sharpness','HALO','HOLE','SPOT','BLUR']
 
-levels = {  'BA': [0.25,2],
-            'CA': [0.25,2],
-            'SA': [0.25,2],
-            'HA': [-0.05,0.05],
-            'SH': [0,2],
+levels = {  'SH': [0,2],
             'HS': [[0,2],[1, 1.2, 1.5, 2],[0.8,0.1,0.05,0.05]],
             'HG': [[0.4,0.9],[-0.06,-0.01]],
             'SP': [[1,8],[0.01,0.08]],
             'IB': [0.1,3]
         }
-
-class Resize(object):
-    def __init__(self, size):
-        self.size = size
- 
-    def __call__(self, image, target=None):
-        #print(image.shape)
-        image = F.resize(image, self.size)
-        if target is not None:
-            target = F.resize(target, self.size)
-        return image, target
-
-class RandomHorizontalFlip(object):
-    def __init__(self, prob=0.5):
-        self.prob = prob
- 
-    def __call__(self, image, target=None):
-        if random.random() < self.prob:
-            image = F.hflip(image)
-        return image, target
-        
-class RandomVerticalFlip(object):
-    def __init__(self, prob=0.5):
-        self.prob = prob
- 
-    def __call__(self, image, target=None):
-        if random.random() < self.prob:
-            image = F.vflip(image)
-        return image, target
-    
-class RandomCrop(object):
-    def __init__(self, size, prob=0.5):
-        self.prob = prob
-        self.size = size
- 
-    def __call__(self, image, target=None):
-        if random.random() < self.prob:
-            tem_trans = T.RandomCrop(self.size)
-            image = tem_trans(image)
-        return image, target
-    
-class CenterCrop(object):
-    def __init__(self, size, prob=0.5):
-        self.prob = prob
-        self.size = size
- 
-    def __call__(self, image, target=None):
-        if random.random() < self.prob:
-            image = F.center_crop(image,self.size)
-        return image, target
-    
-class RandomRotation(object):
-    def __init__(self, degree, prob = 0.5):
-        self.degree = degree
-        self.prob = prob
-
-    def __call__(self, image, target=None):
-        angle = float(torch.empty(1).uniform_(float(self.degree[0]), float(self.degree [1])).item())
-        
-        if random.random() < self.prob:
-            image = F.rotate(image, angle)
-            if target is not None:
-                mask = []
-                for target_item in target:
-                    mask.append(F.rotate(target_item, angle))
-        return image, target
-
-class Normalize(object):
-    def __init__(self, mean, std):
-        self.mean = mean
-        self.std = std
- 
-    def __call__(self, image, target=None):
-        image = F.normalize(image, mean=self.mean, std=self.std)
-        return image, target
- 
-class ToTensor(object):
-    def __call__(self, image, target=None):
-        image = F.to_tensor(image)
-        if target is not None:
-            target = F.to_tensor(target)
-        return image, target
-        
-class Cuda(object):
-    def __call__(self, image, target=None):
-        image = image.cuda()
-        if target is not None:
-            target = target.cuda()
-        return image, target
 
 class Compose(object):
     def __init__(self, transforms):
@@ -121,10 +29,6 @@ class Compose(object):
             image, mask = t(image, mask)
             
         return image, mask
-    
-class Masked(object):
-    def __call__(self, image, mask=None):          
-        return image*mask, mask
 
 class Sharpness(object):
     def __init__(self, level=None, prob = 0.5):

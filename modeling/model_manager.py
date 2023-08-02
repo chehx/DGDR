@@ -1,6 +1,6 @@
 
 from .resnet import resnet18, resnet50, resnet101
-from .all_nets import *
+from .nets import *
 import torch
 
 def get_net(cfg):
@@ -31,5 +31,5 @@ def get_backbone(cfg):
         raise ValueError('Wrong type')
     return model
 
-def get_classifer(out_feature_size, cfg):
+def get_classifier(out_feature_size, cfg):
     return torch.nn.Linear(out_feature_size, cfg.DATASET.NUM_CLASSES)
