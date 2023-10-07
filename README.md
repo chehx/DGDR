@@ -120,10 +120,12 @@ We evaluate the results during training. You can find and analyze the tensorboar
 
 ## Citation
 ```
-@article{che2023DGDR,
-  title={Towards Generalizable Diabetic Retinopathy Grading in Unseen Domains},
+@inproceedings{che2023DGDR,
+  title={Towards generalizable diabetic retinopathy grading in unseen domains},
   author={Che, Haoxuan and Cheng, Yuhan and Jin, Haibo and Chen, Hao},
-  journal={arXiv preprint arXiv:2307.04378},
-  year={2023}
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={430--440},
+  year={2023},
+  organization={Springer}
 }
 ```
