@@ -2,8 +2,9 @@
 
 ## Table of Contents
 
-- [GDRNet: Towards Generalizable Diabetic Retinopathy Grading in Unseen Domains](#towards-generalizable-diabetic-retinopathy-grading-in-unseen-domains)
+- [GDRNet: Towards Generalizable Diabetic Retinopathy Grading in Unseen Domains](#GDRNet-towards-generalizable-diabetic-retinopathy-grading-in-unseen-domains)
   - [Table of Contents](#table-of-contents)
+  - [News](#news)
   - [Introduction](#introduction)
   - [Getting Started](#getting-started)
     - [Data Preparation](#data-preparation)
