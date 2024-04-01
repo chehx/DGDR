@@ -1,6 +1,6 @@
 # Guideline for Building GDR-Bench Dataset
 
-This README is an official guideline on how to prepare the datasets for our work, GDRBench. Our article "Towards Generalizable Diabetic Retinopathy Grading in Unseen Domains" has been accepted to MICCAI2023.
+This README is an official guideline on how to prepare the datasets for our work, GDRBench. 
 
 We include totally eight open-source fundus datasets, APTOS, DeepDR, FGADR, IDRiD, MESSIDOR, RLDR, DDR and Eyepacs, in GDRBench for diabetic retinopathy (DR) grading problem in domain generalization (DG) setting. We test our method and several state-of-the-art methods on pre-processed images. This guideline will show you how to get access to these datasets and how to pre-process them into available input datasets for GDRBench.
 

@@ -1,8 +1,8 @@
-# Towards Generalizable Diabetic Retinopathy Grading in Unseen Domains (MICCAI2023)
+# GDRNet: Towards Generalizable Diabetic Retinopathy Grading in Unseen Domains
 
 ## Table of Contents
 
-- [Towards Generalizable Diabetic Retinopathy Grading in Unseen Domains (MICCAI2023)](#towards-generalizable-diabetic-retinopathy-grading-in-unseen-domains-miccai2023)
+- [GDRNet: Towards Generalizable Diabetic Retinopathy Grading in Unseen Domains](#towards-generalizable-diabetic-retinopathy-grading-in-unseen-domains)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Getting Started](#getting-started)
@@ -11,12 +11,16 @@
     - [Evaluation](#evaluation)
   - [Citation](#citation)
 
+## News
+**2023.05** Our conference paper "Towards Generalizable Diabetic Retinopathy Grading in Unseen Domains" was accepted early by MICCAI2023.
+
 
 ## Introduction
-Diabetic Retinopathy (DR) is a common complication of diabetes and a leading cause of blindness worldwide. Early and accurate grading of its severity is crucial for disease management. Although deep learning has shown great potential for automated DR grading, its real-world deployment is still challenging due to distribution shifts among source and target domains, known as the domain generalization problem. The preliminary evidence presented in the paper suggests the existence of three-fold generalization issues: visual and degradation style shifts, diagnostic pattern diversity, and data imbalance. 
-
-To tackle these issues, we propose a novel unified framework named Generalizable Diabetic Retinopathy Grading Network (GDRNet). GDRNet consists of three vital components: fundus visual-artifact augmentation (FundusAug), dynamic hybrid-supervised loss (DahLoss), and domain-class-aware re-balancing (DCR). FundusAug generates realistic augmented images via visual transformation and image degradation, while DahLoss jointly leverages pixel-level consistency and image-level semantics to capture the diverse diagnostic patterns and build generalizable feature representations. Moreover, DCR mitigates the data imbalance from a domain-class view and avoids undesired over-emphasis on rare domain-class pairs. 
-
+Diabetic Retinopathy (DR) is a common complication of diabetes and a leading cause of blindness worldwide. Early and accurate grading of its severity is crucial for disease management. 
+Although deep learning has shown great potential for automated DR grading, its real-world deployment is still challenging due to distribution shifts among source and target domains. 
+<!-- The preliminary evidence presented in the paper suggests the existence of three-fold generalization issues: visual and degradation style shifts, diagnostic pattern diversity, and data imbalance.  -->
+To tackle these issues, we propose a novel unified framework named Generalizable Diabetic Retinopathy Grading Network (GDRNet). 
+<!-- GDRNet consists of three vital components: fundus visual-artifact augmentation (FundusAug), dynamic hybrid-supervised loss (DahLoss), and domain-class-aware re-balancing (DCR). FundusAug generates realistic augmented images via visual transformation and image degradation, while DahLoss jointly leverages pixel-level consistency and image-level semantics to capture the diverse diagnostic patterns and build generalizable feature representations. Moreover, DCR mitigates the data imbalance from a domain-class view and avoids undesired over-emphasis on rare domain-class pairs.  -->
 Besides the GDRNet, we provide a publicly available benchmark, GDRBench, for fair evaluations. GDRBench contains eight datasets and unified pre-processing. You can follow [here](./GDRBench/README.md) to get this benchmark.
 
 <p align="center">
