@@ -13,7 +13,7 @@
   - [Citation](#citation)
 
 ## News
-**2023.05** Our conference paper "Towards Generalizable Diabetic Retinopathy Grading in Unseen Domains" was accepted early by MICCAI2023.
+**2023.05** Our conference paper "Towards Generalizable Diabetic Retinopathy Grading in Unseen Domains" was early accepted by MICCAI2023 with ratio of 14%.
 
 
 ## Introduction
